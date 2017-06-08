@@ -575,28 +575,30 @@ Handle<Value> fresh(const Arguments& args) {
 }
 
 void init(Handle<Object> exports) {
-    exports->Set(String::NewSymbol("quark"), FunctionTemplate::New(quark)->GetFunction());
-    exports->Set(String::NewSymbol("x11"), FunctionTemplate::New(x11)->GetFunction());
-    exports->Set(String::NewSymbol("scrypt"), FunctionTemplate::New(scrypt)->GetFunction());
-    exports->Set(String::NewSymbol("scryptn"), FunctionTemplate::New(scryptn)->GetFunction());
-    exports->Set(String::NewSymbol("scryptjane"), FunctionTemplate::New(scryptjane)->GetFunction());
-    exports->Set(String::NewSymbol("keccak"), FunctionTemplate::New(keccak)->GetFunction());
-    exports->Set(String::NewSymbol("bcrypt"), FunctionTemplate::New(bcrypt)->GetFunction());
-    exports->Set(String::NewSymbol("skein"), FunctionTemplate::New(skein)->GetFunction());
-    exports->Set(String::NewSymbol("groestl"), FunctionTemplate::New(groestl)->GetFunction());
-    exports->Set(String::NewSymbol("groestlmyriad"), FunctionTemplate::New(groestlmyriad)->GetFunction());
-    exports->Set(String::NewSymbol("blake"), FunctionTemplate::New(blake)->GetFunction());
-    exports->Set(String::NewSymbol("fugue"), FunctionTemplate::New(fugue)->GetFunction());
-    exports->Set(String::NewSymbol("qubit"), FunctionTemplate::New(qubit)->GetFunction());
-    exports->Set(String::NewSymbol("hefty1"), FunctionTemplate::New(hefty1)->GetFunction());
-    exports->Set(String::NewSymbol("shavite3"), FunctionTemplate::New(shavite3)->GetFunction());
-    exports->Set(String::NewSymbol("cryptonight"), FunctionTemplate::New(cryptonight)->GetFunction());
-    exports->Set(String::NewSymbol("x13"), FunctionTemplate::New(x13)->GetFunction());
-    exports->Set(String::NewSymbol("boolberry"), FunctionTemplate::New(boolberry)->GetFunction());
-    exports->Set(String::NewSymbol("nist5"), FunctionTemplate::New(nist5)->GetFunction());
-    exports->Set(String::NewSymbol("sha1"), FunctionTemplate::New(sha1)->GetFunction());
-    exports->Set(String::NewSymbol("x15"), FunctionTemplate::New(x15)->GetFunction());
-    exports->Set(String::NewSymbol("fresh"), FunctionTemplate::New(fresh)->GetFunction());
+    exports->Set(String::NanSymbol("quark"), FunctionTemplate::New(quark)->GetFunction());
+    exports->Set(String::NanSymbol("x11"), FunctionTemplate::New(x11)->GetFunction());
+    exports->Set(String::NanSymbol("scrypt"), FunctionTemplate::New(scrypt)->GetFunction());
+    exports->Set(String::NanSymbol("scryptn"), FunctionTemplate::New(scryptn)->GetFunction());
+    exports->Set(String::NanSymbol("scryptjane"), FunctionTemplate::New(scryptjane)->GetFunction());
+    exports->Set(String::NanSymbol("keccak"), FunctionTemplate::New(keccak)->GetFunction());
+    exports->Set(String::NanSymbol("bcrypt"), FunctionTemplate::New(bcrypt)->GetFunction());
+    exports->Set(String::NanSymbol("skein"), FunctionTemplate::New(skein)->GetFunction());
+    exports->Set(String::NanSymbol("groestl"), FunctionTemplate::New(groestl)->GetFunction());
+    exports->Set(String::NanSymbol("groestlmyriad"), FunctionTemplate::New(groestlmyriad)->GetFunction());
+    exports->Set(String::NanSymbol("blake"), FunctionTemplate::New(blake)->GetFunction());
+    exports->Set(String::NanSymbol("fugue"), FunctionTemplate::New(fugue)->GetFunction());
+    exports->Set(String::NanSymbol("qubit"), FunctionTemplate::New(qubit)->GetFunction());
+    exports->Set(String::NanSymbol("hefty1"), FunctionTemplate::New(hefty1)->GetFunction());
+    exports->Set(String::NanSymbol("shavite3"), FunctionTemplate::New(shavite3)->GetFunction());
+    exports->Set(String::NanSymbol("cryptonight"), FunctionTemplate::New(cryptonight)->GetFunction());
+    exports->Set(String::NanSymbol("x13"), FunctionTemplate::New(x13)->GetFunction());
+    exports->Set(String::NanSymbol("boolberry"), FunctionTemplate::New(boolberry)->GetFunction());
+    exports->Set(String::NanSymbol("nist5"), FunctionTemplate::New(nist5)->GetFunction());
+    exports->Set(String::NanSymbol("sha1"), FunctionTemplate::New(sha1)->GetFunction());
+    exports->Set(String::NanSymbol("x15"), FunctionTemplate::New(x15)->GetFunction());
+    exports->Set(String::NanSymbol("fresh"), FunctionTemplate::New(fresh)->GetFunction());
 }
+
+
 
 NODE_MODULE(multihashing, init)
